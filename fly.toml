@@ -1,0 +1,11 @@
+# Update app name to the name registered in your Fly.io account before deploying.
+app = 'mutuzuni-lodge-preview'
+primary_region = 'jnb'
+[build]
+ dockerfile = 'Dockerfile'
+[http_service]
+ internal_port = 8080
+ force_https = true
+ auto_stop_machines = 'stop'
+ auto_start_machines = true
+ min_machines_running = 0
